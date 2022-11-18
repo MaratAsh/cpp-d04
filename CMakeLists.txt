@@ -18,3 +18,17 @@ add_executable(cpp_04_00
         ex00/includes/WrongCat.hpp
         )
 target_include_directories(cpp_04_00 PRIVATE ex00/includes/)
+
+add_executable(cpp_04_01
+        ex01/srcs/main.cpp
+        ex01/srcs/Animal.cpp
+        ex01/srcs/Cat.cpp
+        ex01/srcs/Dog.cpp
+        ex01/srcs/Brain.cpp
+
+        ex01/includes/Animal.hpp
+        ex01/includes/Cat.hpp
+        ex01/includes/Dog.hpp
+        ex01/includes/Brain.hpp
+        )
+target_include_directories(cpp_04_01 PRIVATE ex01/includes/)
