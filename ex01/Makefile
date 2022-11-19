@@ -4,16 +4,18 @@ CC = c++
 CFAGS = -Wall -Wextra -Werror -std=c++98
 OBJS_DIR = objs
 SRCS_DIR = srcs
+INCL_DIR = ./includes
 FILES := $(shell ls $(SRCS_DIR))
+INCLUDES := $(addprefix $(INCL_DIR)/, $(shell ls $(INCL_DIR)))
 
 OBJS = $(addprefix $(OBJS_DIR)/, $(FILES:.cpp=.o))
 
 all: create_dirs $(TARGET)
 
-$(OBJS_DIR)/%.o: $(SRCS_DIR)/%.cpp
-		$(CC) -I./includes/ $(CFAGS) -c $< -o $@
+$(OBJS_DIR)/%.o: $(SRCS_DIR)/%.cpp $(INCLUDES)
+		$(CC) -I$(INCL_DIR) $(CFAGS) -c $< -o $@
 
-$(TARGET):  $(OBJS)
+$(TARGET):  $(OBJS) $(INCLUDES)
 		$(CC) $(CFAGS) $(OBJS) -o $(TARGET)
 
 create_dirs:
