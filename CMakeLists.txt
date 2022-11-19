@@ -35,12 +35,12 @@ target_include_directories(cpp_04_01 PRIVATE ex01/includes/)
 
 add_executable(cpp_04_02
         ex02/srcs/main.cpp
-        ex02/srcs/Animal.cpp
+        ex02/srcs/AAnimal.cpp
         ex02/srcs/Cat.cpp
         ex02/srcs/Dog.cpp
         ex02/srcs/Brain.cpp
 
-        ex02/includes/Animal.hpp
+        ex02/includes/AAnimal.hpp
         ex02/includes/Cat.hpp
         ex02/includes/Dog.hpp
         ex02/includes/Brain.hpp
