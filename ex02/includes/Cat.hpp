@@ -5,17 +5,18 @@
 #ifndef CAT_HPP
 # define CAT_HPP
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
-class Cat: public Animal
+class Cat: public AAnimal
 {
-	public:
-		Cat();
-		virtual ~Cat();
-		Cat(Cat const &copy);
-		Cat &operator=(Cat const &copy);
+public:
+	Cat();
+	~Cat();
+	Cat(Cat const &copy);
+	Cat &operator=(Cat const &copy);
 
-		void makeSound() const;
+	// virtual void makeSound() const;
+	void makeSound() const;
 };
 
 #endif

@@ -5,27 +5,17 @@
 #ifndef DOG_HPP
 # define DOG_HPP
 
-# include "Animal.hpp"
-# include "Brain.hpp"
+#include "AAnimal.hpp"
 
-class Dog : public Animal
+class Dog: public AAnimal
 {
-
-private:
-	std::string	type;
-	Brain		*brain;
 public:
 	Dog();
-	Dog(const Dog &copy);
+	~Dog();
+	Dog(Dog const &copy);
+	Dog &operator=(Dog const &copy);
 
-
-	virtual ~Dog();
-
-	Dog & operator=(const Dog &assign);
-
-	std::string	getType() const;
-
-	void	makeSound() const;
+	void makeSound() const;
 };
 
 #endif

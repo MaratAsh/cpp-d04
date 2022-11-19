@@ -11,7 +11,7 @@
 
 int main()
 {
-	Animal *animal[ANIMAL + 1];
+	AAnimal *animal[ANIMAL + 1];
 	std::cout << YLW"---------- Create Cats and Dogs ----------"END << std::endl;
 	for (int i = 0; i < ANIMAL; i++)
 	{
@@ -38,9 +38,8 @@ int main()
 	std::cout << YLW"---------- Assignment Operator ----------"END << std::endl;
 	std::cout << animal[0]->getType() << " " << animal[0] << " "  << std::endl;
 	std::cout << animal[1]->getType() << " " << animal[1] << " " << std::endl;
-	*(animal[ANIMAL]) = *(animal[0]);
-	std::cout << animal[0]->getType() << " " << animal[0] << " " << std::endl;
-	std::cout << animal[1]->getType() << " " << animal[1] << " " << std::endl;
+	AAnimal aAnimal = *(animal[0]);
+	std::cout << aAnimal.getType() << " " << std::endl;
 	animal[1]->printIdeas();
 
 	std::cout << YLW"---------- Delete Cats and Dogs ----------"END << std::endl;
